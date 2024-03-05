@@ -2,24 +2,31 @@ public class diagonalSum {
 
 public static void diagonal(int matrix[][]){
     int a=0;
-    int b;
+    int b =0;
 
     for(int i=0;i<matrix.length;i++){
         for(int j=0;j<matrix[0].length;j++){
             if(i==j){
                 a=a+matrix[i][j];
-                
+            }                   
+         }       
+    }
 
-            }
-            
-          
-         }
-        
+    for(int i=0;i<matrix.length;i++){
+        for(int j=matrix[i].length-1;j>=0;j--){
+            if(i+j==matrix.length-1){
+                b=b+matrix[i][j];
+            }                   
+         }       
     }
 
 System.out.println(a);
+System.out.println(b);
+
 
 }
+
+
 
 
 
